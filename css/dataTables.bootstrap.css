@@ -213,6 +213,10 @@ div.dataTables_scrollHead table.table-bordered {
 	color: white;
 }
 
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #e8e8e8;
+}
+
 .table-striped.dataTable tbody tr.active:nth-child(odd) td,
 .table-striped.dataTable tbody tr.active:nth-child(odd) th {
 	background-color: #017ebc;
