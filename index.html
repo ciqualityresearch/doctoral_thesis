@@ -123,9 +123,14 @@
                     </div>        
                 </div>                  
                 <br>
-                <p>
+                <p style="text-align:justify">
 
-                    Thesis abstract....
+                    Continuous Integration (CI) is the practice of automating and improving the frequency of code integration (e.g., daily builds). CI is often considered one of the key elements involved to support agile software teams. It helps to reduce the risks in software development by automatically building and testing a project codebase, which allows the team to fix broken builds immediately. The adoption of CI can help development teams to assess the quality of the product. The potential benefits of adopting CI have brought the attention of researchers to study its advantages empirically. 
+                </p>
+                <p style="text-align:justify"> 
+                        
+                    Previous research has studied the impact of adopting CI on diverse aspects of software development. Despite the valuable advancements, there are still many assumptions in the community that remains empirically unexplored. Our work empirically studies the software quality outcomes and their relationship with the adoption of CI. Currently, we run two empirical experiments that aim to answer the general open questions: (i) Does the adoption of CI share a relationship with the evolution of test code? (ii) The adherence to CI best practices is related to the degree of code quality?
+
 
                 </p>                                          
             </div>
@@ -152,8 +157,8 @@
 
                         In this work, we investigate the evolution of software tests and
                         its relationship with the adoption of Continuous Integration. We set
-                        out to compare <b><a href="#datasets" class="portfolio-link" data-toggle="modal">82 projects that adopted CI (CI projects)</a></b> and 
-                        <b><a href="#datasets" class="portfolio-link" data-toggle="modal">82 projects that have never adopted CI (NOCI projects)</a></b>. In total, we
+                        out to compare <b><a href="#study1_datasets">82 projects that adopted CI (CI projects)</a></b> and 
+                        <b><a href="#study1_datasets">82 projects that have never adopted CI (NOCI projects)</a></b>. In total, we
                         studied <b>3,936 versions</b> of our studied projects to investigate trends on the test code ratio and coverage.
 
                     <br><br>
@@ -275,7 +280,7 @@
             </div>
         </div>
     </section>
-    <section id="datasets">
+    <section id="study1_datasets">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -416,6 +421,127 @@
                     <div class="col-lg-12 text-center">
                         <a href="data/versions_transitions_statistics.csv" class="btn btn-success">
                             <i class="glyphicon glyphicon-download"></i> <b>Download the CI projects commits statistics</b>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>    
+</div>
+
+<div >
+    <!-- About Section -->
+    <section id="study2">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>On the Continuous Code Quality Outcomes of Continuous Integra-
+                        tion: An Empirical Study</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-justify">                    
+                    <p>
+                        In this work, we investigate whether adherence to CI best practices is related to the degree of code quality. Hence, we empirically study <b><a href="#study2_datasets">184 open source projects that use TravisCI and SonarCloud</a></b> to evaluate the relationship between the CI best practices and software quality outcomes.
+
+                    <br><br>
+                    In particular, we address the following research questions:
+                    <br><br>
+                    </p>
+                    <p style="padding-left:40px;padding-right:40px;">
+                    <b>RQ1:</b> Does the degree of CI adoption share a relationship with impro-
+                    ved quality outcomes?                 
+                    <br><br>                    
+                    <b>RQ2:</b> Which practices of CI share a relationship with technical debt?
+                    </p>
+
+                    <!-- <p style="padding-left:40px;padding-right:40px;" class="text-center">
+                    <b>Full Paper Preview and Download</b>
+                    </p>
+                    <p>                                                
+                        <iframe src = "ViewerJS/bernardo2018.pdf" width='750' height='500' allowfullscreen webkitallowfullscreen></iframe>
+                    </p>                                                                              -->
+                    <!--<br>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <a href="#studied-projects" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>See the studied projects</b>
+                        </a>
+                    </div>                                          
+                    -->                    
+                </div>                                                
+            </div>
+        </div>
+    </section>
+	<!-- Portfolio Grid Section -->
+    <section id="results">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Results</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-lg-8 col-lg-offset-2 text-center" id="rq1">
+                    <p>Here we present the results for each RQ that we address.
+                    <br><br>
+                    <p class="text-justify" id="rq1">
+                    <b>RQ1 - Does the degree of CI adoption share a relationship with impro-
+                            ved quality outcomes?</b> We analyze the adoption of 4 well-known CI practices (i.e., avoiding long-running builds; fixing a broken build as
+                            soon as possible; controlling for acceptable test coverage and ntegrating at least daily). Our main hypothesis is that the better the degree of CI adherence the better might be the quality outcomes. However, our analyses show that only the practices of controlling for acceptable test coverage and avoiding long-running builds share a relationship with the improvement in the studied quality outcomes.
+                    <br><br>
+                    </p>
+                    <!-- <p class="text-center">
+                        <a href="#rq1-mww-test-and-cliff-delta-results" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ1: See Mann-Whitney-Wilcoxon test result and Cliff's delta values</b>
+                        </a>
+                    </p> -->
+                    <p class="text-justify" id="rq2">
+                    <!-- <br><br>                     -->
+                    <b>RQ2 - Which practices of CI share a relationship with technical debt?</b> To better understand which specific practices of CI may share a strong relationship
+                    with improved quality outcomes, we fit a regression model in which the amount
+                    of technical debt is the response variable. We use the amount of technical debt in
+                    particular because this metric factors in all of the other studied metrics. The project size (i.e., median_ncloc) metric obtains the most of the explanatory power of our model (as determined by its proportional χ2 of %85).
+                    <br><br>
+                    </p>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="study2_datasets">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Datasets</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p>
+                    For replication purpose, we publicize our datasets to the interested reader.
+                    </p>
+                    <br>
+                </div>
+
+                <section id="ci-noci-datasets">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h3>Projects Dataset with the collected metrics</h3>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <p class="text-justify">
+                                We investigate whether adherence to CI best practices is related to the degree of code quality. Hence, we empirically study 184 open source projects that use TravisCI and SonarCloud to evaluate the relationship between the CI best practices and software quality outcomes. To perform all of our analyses, we collect metrics from SonarCloud and TravisCI. The metrics that we collect from SonarCloud are the metrics that we refer to as quality outcomes. 
+                        </p>
+                        <br>
+                        <p class="text-center">
+                        Use the links below to <b>Projects Dataset with the collected metrics</b> in a format of a CSV document.
+                        </p>                    
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <a href="data/study2_dataset.csv" class="btn btn-success">
+                            <i class="glyphicon glyphicon-download"></i> <b>Download the Projects Dataset with the collected metrics</b>
                         </a>
                     </div>
                 </section>
